@@ -1,0 +1,57 @@
+<ion-header color="light">
+  <ion-buttons color="light">
+    <ion-list no-lines>
+      <ion-item>
+        <ion-navbar item-start  color="light" style="width: 15%;">
+        </ion-navbar>
+        <ion-title text-center>products</ion-title>
+        <div item-end>
+          <button ion-button clear item-end><ion-icon name="search" color="primary"></ion-icon></button>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-buttons>
+</ion-header>
+
+<ion-content  style="background-color: #F8F8F8;">
+  <div style="background-color: coral;border-radius: 50%; width: 50px;height: 50px;
+  margin-left: 45%; margin-top:10px;">
+    <ion-icon name="cart" color="light"></ion-icon>
+  </div>
+  <div padding text-center>
+    <h1>Carte empty</h1>
+    <p text-wrap>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum amet earum facilis soluta magnam nisi, nam saepe sed nulla natus dignissimos iste.</p>
+    <button ion-button style="height: 40px;border-radius: 2px;">Start shopping</button>
+  </div>
+  <ion-list no-lines>
+    <ion-item>
+      <h2 style="font-weight: bold;" item-start>Recently view</h2>
+      <p style="font-weight: bold; color: #FFAF66;" item-end>Sell all</p>
+    </ion-item>
+    <ion-item>
+      <ion-slides loop slidesPerView="2.2" spaceBetween="2px">
+        <ion-slide>
+          <ion-card class="ion-card1" style="border-radius: 2px;">
+            <img src="../../assets/imgs/shose.jpg"/>
+            <div class="card-title">São Paulo</div>
+            <div class="card-subtitle">41 Listings</div>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card class="ion-card1" style="border-radius: 2px;">
+              <img src="../../assets/imgs/shose.jpg"/>
+            <div class="card-title">São Paulo</div>
+            <div class="card-subtitle">41 Listings</div>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card class="ion-card1" style="border-radius: 3px;">
+              <img src="../../assets/imgs/shose.jpg"/>
+            <div class="card-title">São Paulo</div>
+            <div class="card-subtitle">41 Listings</div>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-item>
+  </ion-list>
+</ion-content>

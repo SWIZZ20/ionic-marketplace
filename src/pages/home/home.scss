@@ -1,3 +1,60 @@
 page-home {
+    .item-md .item-button {
+        padding: 0 0.6em;
+        height: 25px;
+        font-size: 2rem;
+    }
 
+    ion-card img {
+        display: block;
+        width: 100%;
+        height: 116px;
+    }
+
+    .swiper-slide img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin-left: 40px;
+        max-height: 100%;
+    }
+
+    .slide-zoom {
+        text-align: center;
+        display: block;
+        width: 100%;
+        height: 150px;
+    }
+
+    ion-card1 {
+        position: relative;
+        text-align: center;
+    }
+    
+    .card-title {
+        position: absolute;
+        top: 36%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color:coral;
+    }
+    
+    .card-subtitle {
+        font-size: 1.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: coral;
+    }
+
+    .card-md p {
+        margin: 0 0 2px;
+        font-size: 1.4rem;
+        font-weight: normal;
+        margin: 3px;
+        line-height: 1.5;
+        color: #222;
+    }
+    
 }

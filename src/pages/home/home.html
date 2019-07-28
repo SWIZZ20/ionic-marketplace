@@ -1,14 +1,39 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+  <ion-list no-lines>
+    <ion-item style="background-color: #ffaf66;">
+        <div item-start style="color: white;">
+            <h2>237MARKETPLACE</h2>
+            <p>25,5k items available</p>
+        </div>
+        <button ion-button clear item-end>
+          <ion-icon name="search" color="primary"></ion-icon>
+        </button>
+    </ion-item>
+    <ion-item>
+       <ion-slides pager loop slidesPerView="1" spaceBetween="5px" autoPlay=true>
+        <ion-slide *ngFor="let annonce of annonces">
+          <img [src]="annonce.img"/>
+        </ion-slide>
+      </ion-slides>
+    </ion-item>
+  </ion-list>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content style="background-color: rgb(253, 252, 252);">
+ <div ion-item no-lines>
+   <p item-start style="font-weight: bold;">New arrivals</p>
+   <p item-end style="color:#FFAF66;">See all</p>
+ </div>
+ <ion-row>
+   <ion-col col-6 *ngFor="let item of items" (click)="goToSingleProductPage(item)">
+      <ion-card style="border-radius: 10px; height: 200px;">
+        <img style="margin-top:10px;" [src]="item.images[1]"/>
+        <ion-content>
+          <p style="font-weight: bold;">{{item.nom}}</p>
+          <p style="color:#FFAF66;">{{item.mark}}</p>
+          <p style="font-weight: bold;">{{item.price | currency}} - {{item.price | currency}}</p>
+        </ion-content>
+      </ion-card>
+   </ion-col>
+ </ion-row>
 </ion-content>

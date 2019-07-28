@@ -1,0 +1,34 @@
+<!--
+  Generated template for the SignInPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content padding>
+  <div padding style="margin-top:10%;" padding text-center>
+    <h2>237<br> Marketplace</h2>
+    <p text-wrap>Connectez-vous sur notre plateforme et trouver le produit que vous recherchez en quelques cliques. </p>
+  </div>
+  <ion-list padding no-lines>
+    <ion-item style="background-color: #F8F8F8; border-radius: 5px;margin-bottom: 10px;">
+      <ion-input type="email" placeholder="Email" [(ngModel)]="email"></ion-input>  
+    </ion-item>
+    <ion-item style="background-color: #F8F8F8; border-radius: 5px;margin-bottom: 10px;">
+      <ion-input type="password" placeholder="password" [(ngModel)]="password"></ion-input>  
+    </ion-item>
+    <p *ngIf="errorMessage" style="color:red;">{{errorMessage}}</p>
+    <button ion-button block style="height: 40px;" (click)="goToTabsPage()">Connexion</button>
+    <p ion-button block clear style="height: 40px;" (click)="goToResetPasswordPage()">mot de passe oublié ?</p>
+  </ion-list>
+  <ion-list>
+    <p text-center>Ou avec les réseaux sociaux</p>
+    <ion-item>
+      <button ion-button block item-start style="height: 40px;"> Facebook <ion-icon name="logo-facebook" color="light"></ion-icon></button>
+      <button ion-button block item-start style="height: 40px;"> twetter <ion-icon name="logo-twitter" color="light"></ion-icon></button>
+    </ion-item>
+    <ion-item>
+      <p ion-button block clear style="color: coral;" (click)="goToSignUpPage()">S'inscrire</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-buttons>
+      <ion-list no-lines>
+        <ion-item>
+          <ion-navbar item-start  color="light" style="width: 15%;">
+          </ion-navbar>
+          <ion-title text-center>products</ion-title>
+          <button ion-button clear item-end><ion-icon name="search" color="primary"></ion-icon></button>
+        </ion-item>
+        <ion-item>
+          <div>
+            <h2>{{category.nom}}</h2>
+            <p>24,7K items</p>
+          </div>
+          <button ion-buttons clear item-end style="height: 50px;width: 50px; border-radius: 50%;"><img src="../../assets/imgs/man.png"></button>
+        </ion-item>
+        <ion-item>
+          <button ion-button medium color="primary" item-start style="width: 150px; height: 50px;" (click)="openMenu()">short by <ion-icon name="arrow-dropdown"></ion-icon></button>
+          <button ion-button medium color="primary" item-end style="width: 150px; height: 50px;" (click)="openMenu()">short by <ion-icon name="arrow-dropdown"></ion-icon></button>
+        </ion-item>
+      </ion-list>
+    </ion-buttons>
+</ion-header>
+<ion-content padding class="action-sheets-basic-page">
+  <ion-list no-lines>
+    <button ion-item (click)="goToSingleProductPage()" *ngFor="let prod of products" style="margin-top: 10px;">
+      <img item-start [src]="prod.images[0]" style="height: 100px; width: 100px">
+      <div style="margin-left: 20px;">
+        <h2 style="font-weight: bold;">{{prod.nom}}</h2>
+        <p style="color:#FFAF66">{{prod.categorie}}</p>
+        <p style="font-weight: bold;">{{prod.price | currency}}</p>
+      </div>
+      <div item-end>
+        <ion-icon name="more"></ion-icon>
+      </div>
+    </button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header style="background-color: #ffffff;">
+    <ion-buttons color="light">
+      <ion-list no-lines>
+        <ion-item>
+          <ion-navbar item-start  color="light" style="width: 15%;">
+          </ion-navbar>
+          <ion-title text-center>Catégories</ion-title>
+          <div item-end>
+            <p item-end style="color: coral;">Clear all</p>
+          </div>
+        </ion-item>
+        <ion-item>
+          <div item-start>
+            <h1 style="color: coral; font-weight: bold;">Liste des catégories</h1>
+            <p>Nous avons actuellement 4 catégories</p>
+          </div>
+          <img item-end src="../../assets/imgs/man.png" style="height: 50px; width: 50px;">
+        </ion-item>
+      </ion-list>
+    </ion-buttons>
+  </ion-header>
+<ion-content>
+  <ion-card *ngFor="let cat of categories" style="height: 100px; border-radius: 10px;"
+  (click)="goToProductListPage(cat)">
+    <ion-list>
+      <ion-item>
+        <div item-start style="height: 10px;margin-left: 10px;">
+          <img [src]="cat.image" style="height: 50px; width: 50px;" />
+        </div>
+        <div text-center style="margin-top:5px;">
+          <h2 style="font-weight: bold;">{{cat.nom}}</h2>
+          <p style="color:#FFAF66;">{{cat.nbItem}} items</p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

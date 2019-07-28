@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>shopping payement</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <ion-list padding no-lines>
+    <ion-item style="background-color: #F8F8F8; border-radius: 2px;">
+      <ion-label>Credit card</ion-label>
+      <ion-select [(ngModel)]="payementType" multiple="true" cancelText="Nah" okText="Okay!">
+          <ion-option value="Visa" selected="true">Visa</ion-option>
+          <ion-option value="Master card">Master card</ion-option>
+          <ion-option value="PayPal">Paypal</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <h2 item-start style="font-weight: bold;">Add credit card</h2>
+      <p item-end style="color:coral;">Clear all</p>
+    </ion-item>
+    <ion-item style="background-color: #F8F8F8; border-radius: 5px;margin-bottom: 10px;">
+      <ion-input type="number" placeholder="Card number"></ion-input>  
+    </ion-item>
+    <ion-item style="background-color: #F8F8F8; border-radius: 5px;margin-bottom: 10px;">
+      <ion-input type="text" placeholder="Cardholder name"></ion-input>  
+    </ion-item>
+    <ion-item style="background-color: #F8F8F8; border-radius: 5px;margin-bottom: 10px;">
+      <ion-input item-start type="text" placeholder="MM/YY"></ion-input>
+      <ion-input  type="text" placeholder="CVV"></ion-input>
+      <button ion-button item-end style="height: 40px;width: 80px;">ADD</button>  
+    </ion-item>
+  </ion-list>
+  <ion-item no-lines>
+    <h2 item-start style="font-weight: bold;">Credit card</h2>
+    <p item-end style="color:coral;">Edit</p>
+  </ion-item>
+      <ion-slides pager style="height: 30%">
+        <ion-slide>
+          <ion-card>
+            <ion-list no-lines>
+              <ion-item>
+                <h2 item-start style="font-weight: bold;">VISA</h2>
+                <p item-end style="font-weight: bold;">Visa electron</p>
+              </ion-item>
+              <ion-item>
+                <p text-center style="font-weight: bold; font-size: 1.9rem">****  ****  ****  **** 4530</p>
+              </ion-item>
+              <ion-item>
+                <div item-start>
+                  <p>Expiry date : 02/2019</p>
+                  <p>Hervé Yves NTONGA</p>
+                </div>
+                <ion-icon item-end name="checkmark-circle" color="primary"></ion-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card>  
+        </ion-slide>
+
+        <ion-slide>
+            <ion-card>
+              <ion-list no-lines>
+                <ion-item>
+                  <h2 item-start style="font-weight: bold;">VISA</h2>
+                  <p item-end style="font-weight: bold;">Visa electron</p>
+                </ion-item>
+                <ion-item>
+                  <p text-center style="font-weight: bold; font-size: 1.9rem">****  ****  ****  **** 4530</p>
+                </ion-item>
+                <ion-item>
+                  <div item-start>
+                    <p>Expiry date : 02/2019</p>
+                    <p>Hervé Yves NTONGA</p>
+                  </div>
+                  <ion-icon item-end name="checkmark-circle"></ion-icon>
+                </ion-item>
+              </ion-list>
+            </ion-card>  
+          </ion-slide>
+      </ion-slides>
+  <button ion-button block (click)="goToShoppingAddressPage()" style="height: 50px;">Next step: payement address</button>
+</ion-content>

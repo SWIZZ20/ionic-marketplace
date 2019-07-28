@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>shopping methode</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color: #F8F8F8;">
+  <ion-item no-lines style="height: 20px;">
+
+  </ion-item>
+    <ion-list no-lines padding>
+      <ion-item style="margin-bottom: 5px; border-radius:10px;">
+          <ion-icon name="bus" item-start></ion-icon>
+        <div>
+          <p>At Home</p>
+          <p>4-7 days $20</p>
+        </div>
+        <div item-end>
+          <ion-icon name="checkmark"></ion-icon>
+        </div>
+      </ion-item>
+      <ion-item style="margin-bottom: 5px; border-radius:10px;">
+          <ion-icon name="home" item-start></ion-icon>
+          <div>
+            <p>At store</p>
+            <p>0 delay</p>
+          </div>
+          <div item-end>
+            <ion-icon name="checkmark"></ion-icon>
+          </div>
+      </ion-item>
+      <ion-item style="margin-bottom: 5px; border-radius:10px;">
+          <ion-icon name="home" item-start></ion-icon>
+          <div>
+            <p>At store</p>
+            <p>0 delay</p>
+          </div>
+          <div item-end>
+            <ion-icon name="checkmark"></ion-icon>
+          </div>
+      </ion-item>
+    </ion-list>
+    <ion-item no-lines style="background-color: #F8F8F8;">
+      <p item-start>Delivry time</p>
+      <p item-end>8-9 jours</p>
+    </ion-item>
+    <ion-item>
+      <p item-start>SubTotal : 35%</p>
+      <p item-end>$237.00</p>
+    </ion-item>
+    <ion-item>
+      <p item-start>Delivry at home</p>
+      <p item-end>$20</p>
+    </ion-item>
+    <ion-item>
+      <div item-start>
+        <p style="font-weight: bold;">Total Payment</p>
+      </div>
+      <div item-end>
+        <p style="font-weight: bold;">$230.00</p>
+      </div>
+    </ion-item>
+    <button ion-button block style="height: 50px;"
+    (click)="goToShoppingInfosPage()">Next step: Shopping infos</button>
+  </ion-content>
