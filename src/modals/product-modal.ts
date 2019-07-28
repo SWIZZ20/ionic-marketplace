@@ -5,5 +5,6 @@ export interface products{
     price:number;
     categorie:string;
     reduction ?:number;
-    images:string[]
+    images:string[];
+    quantite:number;
 }

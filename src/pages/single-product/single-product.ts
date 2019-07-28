@@ -74,7 +74,7 @@ export class SingleProductPage {
   }
 
   addToCart(produit:products){
-    this.cartService.saveDataInLocal(produit);
+    this.cartService.AddNewProduct(produit);
   }
 
 }

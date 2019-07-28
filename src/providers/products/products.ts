@@ -1,6 +1,7 @@
+import { products } from './../../modals/product-modal';
 import { Injectable } from '@angular/core';
-import { products } from '../../modals/product-modal';
 import { categories } from '../../modals/category-modal';
+import { cart } from '../../modals/cart-modal';
 
 /*
   Generated class for the ProductsProvider provider.
@@ -14,6 +15,7 @@ export class ProductsProvider {
   product_list:products[];
   catList:products[];
   category_list:categories[];
+  cart:cart;
   constructor() {
     this.catList=[];
     this.product_list=[{
@@ -28,6 +30,7 @@ export class ProductsProvider {
       ],
       categorie:"Chaussures",
       price:10,
+      quantite:0,
     },
     {
       nom:"Jacket Nike",
@@ -40,7 +43,8 @@ export class ProductsProvider {
         "../../assets/imgs/annonces/jacket_nike.jpg",
       ],
       categorie:"Vêtements",
-      price:10
+      price:10,
+      quantite:0,
     },
     {
       nom:"Chaussure nike",
@@ -53,7 +57,8 @@ export class ProductsProvider {
         "../../assets/imgs/annonces/nike-colin.jpg",
       ],
       categorie:"Chaussures",
-      price:10
+      price:10,
+      quantite:0,
     },
     {
       nom:"Jacket addidas",
@@ -66,7 +71,8 @@ export class ProductsProvider {
         "../../assets/imgs/annonces/jacket_addidas.jpg",
       ],
       categorie:"Vêtements",
-      price:10
+      price:10,
+      quantite:0,
     }]
     this.category_list=[
       {
