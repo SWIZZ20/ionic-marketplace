@@ -12,13 +12,13 @@
         </ion-navbar>
         <ion-title text-center>Cart</ion-title>
         <div item-end>
-          <p item-end style="color: coral;">Clear all</p>
+          <p item-end style="color: coral;" (click)="clearAll()">Clear all</p>
         </div>
       </ion-item>
       <ion-item>
         <div item-start>
           <h1 style="color: coral; font-weight: bold;">Cart</h1>
-          <p>You have 3 items in your cart</p>
+          <p>You have {{product_list.length}} items in your cart</p>
         </div>
         <img item-end src="../../assets/imgs/man.png" style="height: 50px; width: 50px;">
       </ion-item>
@@ -28,69 +28,19 @@
 
 <ion-content style="background-color: #F8F8F8;">
   <ion-list no-lines>
-    <ion-item>
+    <ion-item *ngFor="let item of product_list; let i=index">
       <div item-start>
-        <img src="../../assets/imgs/shose.jpg" style="width: 100px; height: 80px;">
+        <img [src]="item.images[0]" style="width: 100px; height: 80px;">
       </div>
       <div>
-        <p style="font-weight: bold;">Chaussure mocassin</p>
-        <p style="font-weight: bold; color: coral;">Hugo boss</p>
-        <p style="font-weight: bold;">$250.00 $300.00 </p>
+        <p style="font-weight: bold;">{{item.nom}}</p>
+        <p style="font-weight: bold; color: coral;">{{item.mark}}</p>
+        <p style="font-weight: bold;">${{item.price}}.00 ${{item.price - 3}}.00 </p>
       </div>
       <div item-end> 
-        <p style="margin-left: 40px;"><ion-icon name="close"></ion-icon></p>
-        <p style="margin-left: 40px;"><ion-icon name="heart"></ion-icon></p>
+        <p style="margin-left: 40px;"><ion-icon name="close" (click)="remove()"></ion-icon></p>
+        <p style="margin-left: 40px;"><ion-icon name="heart" (click)="likeItem()"></ion-icon></p>
       </div>
-    </ion-item>
-    <ion-item>
-        <div item-start>
-          <img src="../../assets/imgs/shose.jpg" style="width: 100px; height: 80px;">
-        </div>
-        <div>
-          <p style="font-weight: bold;">Chaussure mocassin</p>
-          <p style="font-weight: bold; color: coral;">Hugo boss</p>
-          <p style="font-weight: bold;">$250.00 $300.00 </p>
-        </div>
-        <div item-end> 
-          <p style="margin-left: 40px;"><ion-icon name="close"></ion-icon></p>
-          <p style="margin-left: 40px;"><ion-icon name="heart"></ion-icon></p>
-        </div>
-      </ion-item>
-      <ion-item>
-        <div item-start>
-          <img src="../../assets/imgs/shose.jpg" style="width: 100px; height: 80px;">
-        </div>
-        <div>
-          <p style="font-weight: bold;">Chaussure mocassin</p>
-          <p style="font-weight: bold; color: coral;">Hugo boss</p>
-          <p style="font-weight: bold;">$250.00 $300.00 </p>
-        </div>
-        <div item-end> 
-          <p style="margin-left: 40px;"><ion-icon name="close"></ion-icon></p>
-          <p style="margin-left: 40px;"><ion-icon name="heart"></ion-icon></p>
-        </div>
-      </ion-item>
-  </ion-list>
-  <ion-list no-lines padding>
-    <ion-item style="margin-bottom: 5px; border-radius:10px;">
-        <ion-icon name="bus" item-start></ion-icon>
-      <div>
-        <p>At Home</p>
-        <p>4-7 days $20</p>
-      </div>
-      <div item-end>
-        <ion-icon name="checkmark"></ion-icon>
-      </div>
-    </ion-item>
-    <ion-item style="margin-bottom: 5px; border-radius:10px;">
-        <ion-icon name="home" item-start></ion-icon>
-        <div>
-          <p>At store</p>
-          <p>0 delay</p>
-        </div>
-        <div item-end>
-          <ion-icon name="checkmark"></ion-icon>
-        </div>
     </ion-item>
   </ion-list>
   <ion-item no-lines>
@@ -99,7 +49,7 @@
       <p>Includind Delivery</p>
     </div>
     <div item-end>
-      <p style="font-weight: bold;">$230.00</p>
+      <p style="font-weight: bold;">${{totalPrice}}.00</p>
       <p>$20</p>
     </div>
   </ion-item>

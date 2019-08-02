@@ -11,6 +11,7 @@ import { products } from '../../modals/product-modal';
 export class HomePage {
 
   items:products[];
+  nbItems:number=0;
   annonces=[
     {
       annonceur:"addidas",
@@ -37,6 +38,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,public productService:ProductsProvider) {
     this.items=this.productService.product_list;
+    this.nbItems=this.productService.product_list.length;
   }
 
   goToSingleProductPage(item:products){

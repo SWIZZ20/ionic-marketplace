@@ -13,16 +13,12 @@ export class TabsPage {
 
   tab1Root = HomePage;
   tab2Root = CategoriesPage;
-  tab3Root = EmptyCardPage;
+  tab3Root = CartPage;
   tab4Root = WishlistPage;
   tab5Root = SettingsPage;
   carIsEmpty:boolean=false;
 
   constructor() {
-    if(this.carIsEmpty){
-      this.tab3Root=EmptyCardPage;
-    }else{
-      this.tab3Root=CartPage;
-    }
+    
   }
 }

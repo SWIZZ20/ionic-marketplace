@@ -36,25 +36,8 @@ export class CartProvider {
 
   AddNewProduct(produit: products){
     console.log('ok');
-    if(this.productList.length==0){
-      produit.quantite= produit.quantite + 1;
-      this.productList.push(produit);
-      console.log(this.productList);
-    }else{
-      for(let i=0; i<this.productList.length ; i++){
-      
-        if(this.productList[i].nom===produit.nom){
-          this.productList[i].quantite = this.productList[i].quantite + 1;
-          console.log(this.productList);
-        }else{
-          produit.quantite= produit.quantite + 1;
-          this.productList.push(produit);
-          console.log(this.productList);
-        }
-      }
-    }
-    
-    
+    this.productList.push(produit);
+    console.log(this.productList);
   }
 
 }
